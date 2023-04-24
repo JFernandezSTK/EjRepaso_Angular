@@ -1,0 +1,29 @@
+<h1>Directivas</h1>
+<p>Pulsa el boton y veras como cambia el contenido del parrafo gracias a ngIfElse <button (click)="cambiaIf()">Cambiar</button></p>
+<p *ngIf="boolIf;else Parrafo2">Este es el parrafo por defecto</p>
+<ng-template #Parrafo2><p>Este es el otro parrafo que se muestra</p></ng-template>
+<hr>
+<p>La siguiente tabla se va a rellenar con un ngFor</p>
+<p>Piratas del sombrero de paja en orden de union (hasta donde he visto)</p>
+<table>
+    <thead>
+        <th>Index</th>
+        <th>Nombre</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let mugiwara of piratas; let i = index">
+            <td>{{mugiwara.id}}</td>
+            <td>{{mugiwara.name}}</td>
+        </tr>
+    </tbody>
+</table>
+<hr>
+<p>Escriba el numero del parrafo a mostrar gracias al ngSwitch <input type="number" [(ngModel)]="num"></p>
+<button (click)="cambiaSwitch()">Cambiar</button>
+<div [ngSwitch]="comprueba">
+    <p *ngSwitchCase="0">Parrafo 0</p>
+    <p *ngSwitchCase="1">Parrafo 1</p>
+    <p *ngSwitchCase="2">Parrafo 2</p>
+    <p *ngSwitchCase="3">Parrafo 3</p>
+    <p *ngSwitchDefault>Parrafo con numero distinto a 0 1 2 3</p>
+</div>

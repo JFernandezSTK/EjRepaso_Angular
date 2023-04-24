@@ -1,0 +1,5 @@
+<h1>Pasar varios elementos por routing</h1>
+<p>Escriba en los siguientes campos de texto</p>
+<input type="text" [(ngModel)]="id">
+<input type="text" [(ngModel)]="accion">
+<button [routerLink]="['/variosElementosrecibe',id,accion]" routerLinkActive="active" ariaCurrentWhenActive="page">Enviar</button>

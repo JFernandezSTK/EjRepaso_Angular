@@ -1,0 +1,3 @@
+<h1>Pasar 1 elemento con routing</h1>
+<p>Escriba algo en la caja de texto <input type="text" [(ngModel)]="texto"></p>
+<button [routerLink]="['/elemento1recibe',texto]" routerLinkActive="active" ariaCurrentWhenActive="page">enviar</button>
